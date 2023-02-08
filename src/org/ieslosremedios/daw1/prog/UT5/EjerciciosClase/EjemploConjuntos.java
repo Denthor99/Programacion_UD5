@@ -49,5 +49,8 @@ public class EjemploConjuntos {
         conjunto2.add("El 3");
         conjunto.removeAll(conjunto2);
         System.out.println(conjunto);
+
+        // Introducimos un Integer en el conjunto
+        //conjunto.add((String)32);
     }
 }
