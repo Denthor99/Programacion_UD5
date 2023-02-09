@@ -35,7 +35,28 @@ public class EjercicioTreeSet {
             System.out.print(iter.next()+", ");
         }
         System.out.print("]");
+        System.out.println("");
 
         // Haz lo mismo con objetos de la clase persona
+        TreeSet<Persona>arbolPersona=new TreeSet<>();
+        Persona dani=new Persona("Dani",20);
+        Persona roberto=new Persona("Roberto",12);
+        Persona jorge=new Persona("Jorge",23);
+        Persona fran=new Persona("Fran",40);
+        arbolPersona.add(dani);
+        arbolPersona.add(roberto);
+        arbolPersona.add(jorge);
+        arbolPersona.add(fran);
+        for (Persona e:
+             arbolPersona) {
+            System.out.println(e);
+        }
+        System.out.println("");
+        Iterator<Persona> personas= arbolPersona.iterator();
+        while (personas.hasNext()){
+            System.out.println(personas.next());
+        }
+
+
     }
 }
