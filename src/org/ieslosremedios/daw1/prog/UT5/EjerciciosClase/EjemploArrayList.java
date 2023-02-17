@@ -45,9 +45,50 @@ public class EjemploArrayList {
         while(it.hasNext()){
             System.out.println(it.next());
         }
-        while (it.hasPrevious()){
-            System.out.println(it.hasPrevious());
-        }
+        //while (it.hasPrevious()){
+        //   System.out.println(it.hasPrevious());
+        //}
 
+        // Creamos una lista con varios numeros
+        List<Integer>nums=new ArrayList<>();
+        nums.add(4);
+        nums.add(2);
+        nums.add(9);
+        nums.add(1);
+        nums.add(78);
+        nums.add(10);
+        ListIterator<Integer> itnum=nums.listIterator();
+
+        // Recorrido elementos
+        while (itnum.hasNext()){
+            Integer i= itnum.next();
+            if(i<6){
+                itnum.remove();
+            }
+
+        }
+        System.out.println(nums);
+
+        //Recorremos los elementos de una nueva lista, pero esta vez al reves
+        List<Integer>numeros=new ArrayList<>();
+        numeros.add(4);
+        numeros.add(2);
+        numeros.add(9);
+        numeros.add(1);
+        numeros.add(28);
+        numeros.add(15);
+        numeros.add(10);
+        ListIterator<Integer> itnumeros=numeros.listIterator();
+        //Añadimos el elemento 10 despues del 9
+        while(itnumeros.hasPrevious()){
+            Integer r= itnumeros.previous();
+            if (r>20){
+                itnumeros.remove();
+            }
+            if (r==9){
+                itnumeros.add(10);
+            }
+        }
+        System.out.println(numeros);
     }
 }
