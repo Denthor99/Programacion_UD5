@@ -77,7 +77,6 @@ public class EjemploArrayList {
         numeros.add(1);
         numeros.add(28);
         numeros.add(15);
-        numeros.add(10);
         ListIterator<Integer> itnumeros=numeros.listIterator();
         //Añadimos el elemento 10 despues del 9
         while(itnumeros.hasPrevious()){
@@ -85,7 +84,7 @@ public class EjemploArrayList {
             if (r>20){
                 itnumeros.remove();
             }
-            if (r==9){
+            if (r==2){
                 itnumeros.add(10);
             }
         }
